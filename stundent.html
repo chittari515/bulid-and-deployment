@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body bgcolor="aqua">
+    <h2 align="center"> Registration Form</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="6ff13b87-e9ba-4937-86e6-2f72e5c0574c">
+
+        <label for="name"> first Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+ <label for="name"> last Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+<label for="b.tech">Select Course:</label>
+<select id="b.tech" name="b.tech" required>
+    <option value="">Select Course</option>
+    <option value="cse">cse</option>
+    <option value="ECE">ECE</option>
+    <option value="EEE"></option>
+    <option value="AIDS">AIDS</option>
+<option value="DS">DS</option>
+<option value="AIML">AIML</option>
+<option value="CIVIL">CIVIL</option>
+</select><br><br>
+
+<label for="semester">Select Semester:</label>
+<select id="semester" name="semester" required>
+    <option value="1-1">Select Semester1-1-2r</option>
+    <option value="2-1-2">Select Semester2-1-2</option>
+    <option value="3-1-2">Select Semester3-1-2</option>
+<option value="4-1">Select Semester4-1-2r</option>
+    
+</select><br><br>
+
+        
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+         
+        </select><br><br>
+        
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br>
+        
+        <a href="file:///E:/end%20page.html"class="button">Submit</a>
+    </form>
+</body>
+</html>

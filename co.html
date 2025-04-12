@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" content="width=deivce-width,initial-scale=1">
+        <title>Resposive practice website</title>
+        <link rel="stylesheet"type="tex/css" href="css/style.css">
+        
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    text-decoration:  none;
+    list-style: none;
+}
+:root{
+    --bg-color:#ffffff;
+    --text-color:#0f172a;
+    --main-colo: #6b7280;
+    --other-color: #334155;
+    --big-font: 4.3rem;
+    --h2-font: 2.2rem;
+    --p-font: 1rem;
+}
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: fiex;
+    align-items: center;
+    justify-content: space-between;
+    background:  transparent;
+    padding: 17px 11%;
+    border-bottom: 1px solid #f7f9fb;
+    transition: all .45s ease;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: var(--p-font);
+    color: var(--other-color);
+    font-weight: 400;
+    padding: 10px 25px;
+    margin: 0 5px;
+    background: transparent;
+    border-radius:  30px;
+    transition: all .45s ease;
+}
+.navbar a:hover{
+background: #f7f9fb;
+}
+.navbar a.active{
+    background:#f7f9fb;
+}
+.icons{
+    display-items: flex;
+    align-items: center;
+}
+.icon i{
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: var(--other-color);
+    margin-right: 25px;
+    font-size: 22px;
+    margin-left:  10px;
+    transition: all .4s ease; 
+}
+.icon i:hover{
+    transform: scale(0.9);
+}
+#menu-icon{
+    color: var(--other-color);
+    font-size: 33px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 100px 11% 90px;
+}
+.home{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/background.svg);
+    background-color: #e3ffe6;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.home-img img{
+    width: 100%;
+    height: auto;
+}
+.home-text h4{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--other-color);
+}
+.home-text h1{
+    font-size: var(--big-font);
+    color: var(--text-color);
+    line-height: 1.2;
+    margin: 25px 0 45px;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 30px;
+    background-color: var(--text-color);
+    column-rule: var(--big-color);
+    font-size: 15px;
+    letter-spacing:1px;
+ border-radius: 30px;
+ transition: all .45s ease;   
+}
+.btn:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+.header.sticky{
+    background: var(--bg-color);
+    padding: 14px 11%;
+}
+.middle-text h2{
+    font-size: var(--h2-font);
+    color: var(--text-color);
+font-weight: 600;
+}
+span{
+    color: var(--main-colo);
+}
+.feature-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, auto));
+    gap: 1rem;
+    align-items: center;
+    margin: 2rem;
+}
+.row{
+    padding: 40px 30px;
+    background: #e3ffe6;
+    border-radius: 20px;
+    transition: all .45s ease;
+}
+.main-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    gap: 2rem;
+}
+.row-img img {
+    width: 170px;
+    height: auto;
+    max-width: 100p%;
+}
+.row-text h6{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--other-color);
+    margin-bottom: 1rem;
+}
+.row-text h3{
+    margin-bottom: 3rem;
+    font-size: 26px;
+    font-weight: 600;
+}
+.row-btn{
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--big-color);
+    color: var(--other-color);
+    font-size: 15px;
+    border-radius: 30px;
+    transition: all .45s ease;
+}
+.row-btn:hover{
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+.row2{
+    background: #fef2f2;
+}
+.row3{
+    background: #eff6ff;
+}
+.row:hover{
+    transform: translate(-5px);
+    cursor: pointer;
+    
+}
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
+}
+.box{
+    position: relative;
+}
+.box-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    transition: all .45s ease;
+}
+</style>
+    </head>
+    <body>
+        <!----header section  design--->
+        <header>
+            <a href="#"class="logo">
+                <img src=""></a>
+            <ul class="nav">
+                <li><a herf="#" class="active">Home</a></li>
+                <li><a herf="#">About</a></li>
+                <li><a herf="#">Shop</a></li>
+                <li><a herf="#">pages</a></li>
+                <li><a herf="#">Blog</a></li>
+                <li><a herf="#">Contact</a></li>
+            </ul>
+            <div class="icon">
+                <a href="#"><i class="ri-search-line"></i></a>
+                <a href="#"><i class="ri-user-line"></i></a>
+                <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+        <!---- home section design---->
+        <section class="home">
+            <div class="home-text">
+                <h4>In this season.Find the best</h4>
+                <h1>Exclusive collection for everyone</h1>
+                <a href="#"class="btn"> Explore now</a>
+            </div>
+            <div class="home-img">
+                <img src="https://alivoe.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-right-2.dc1c84f6.png&w=3840&q=75">
+            </div>
+
+        </section>
+        <!---- feature section design--->
+        <section class="feature">
+            <div class="middle-text">
+                <h2>Discover more<span>Good things.</span></h2>
+            </div>
+            <div class="feature-content">
+                <div class="row row1">
+                    <div class="metin-row">
+                        <div class="row-text">
+                            <h6>Explore new arrivals</h6>
+                            <h3> Give the gift <br> of choice</h3>
+                            <a href="#" class="row-btn">Show me all</a>
+                        </div>
+                        <div class="row-img">
+                            <img src="https://th.bing.com/th/id/OIP.yc-9sJ3FOmgfpO6uzFFeRwHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+            <div class="row row2">
+                <div class="metin-row">
+                    <div class="row-text">
+                        <h6>Explore new arrivals</h6>
+                        <h3> Give the gift <br> of choice</h3>
+                        <a href="#" class="row-btn">Show me all</a>
+                    </div>
+                    <div class="row-img 1">
+                        <img src="https://th.bing.com/th/id/OIP.YA0TA1rDpxROVbq8QyQzLQHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    </div>
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="metin-row">
+                    <div class="row-text">
+                        <h6>Explore new arrivals</h6>
+                        <h3> Give the gift <br> of choice</h3>
+                        <a href="#" class="row-btn">Show me all</a>
+                    </div>
+                    <div class="row-img 2">
+                        <img src="https://th.bing.com/th/id/OIP.x0jofEwWhMDt4PgiAzfaRgHaHa?w=204&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!---- product section design--->
+        <section class="product">
+            <div class="middle-text">
+                <h2>New Arrivals.<span>Best Selling of the month</span></h2>
+            </div>
+            <div class="product-content">
+                    <img src="https://th.bing.com/th/id/OIP.shRkCQxfFEIvLu25SwYT9wHaHa?w=208&h=208&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    <div class="box">
+                    <div class="box-img">
+                   <img src="https://th.bing.com/th/id/OIP.xRHI4oh4M_z50Lh7or8dOgHaLX?w=201&h=309&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                </div>
+<h3>Manhattan Toy wrt</h3>
+<h4>New design 2025</h4>
+<div class="inbox">
+    <div>
+        <a herf="#" class="price">$250.00</a>
+    </div>
+    <div class="rating">
+        <a href="#"><i class="ri-star-fill"></i></a>
+        <a href="#"><i class="ri-star-fill"></i></a>
+        <a href="#"><i class="ri-star-fill"></i></a>
+        <a href="#"><i class="ri-star-fill"></i></a>
+        <a href="#"><i class="ri-star-fill"></i></a>
+    </div>
+</div>
+<div class="heart">
+    <i class="ri-poker-hearts-line"></i>
+</div>
+<div class="box">
+    <div class="box-img">
+   <img src="https://th.bing.com/th/id/OIP.QtXJImAz2BnyJWj4dr50NwHaJQ?w=208&h=260&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+</div>
+<h3>Manhattan Toy wrt</h3>
+<h4>New design 2025</h4>
+<div class="inbox">
+<div>
+<a herf="#" class="price">$250.00</a>
+</div>
+<div class="rating">
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+</div>
+</div>
+<div class="heart">
+<i class="ri-poker-hearts-line"></i>
+</div>
+</div>
+<div class="box">
+    <div class="box-img">
+   <img src="https://th.bing.com/th?q=Boy+Profile+Pic+in+Formal+Dress+Code&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247">
+</div>
+<h3>Manhattan Toy wrt</h3>
+<h4>New design 2025</h4>
+<div class="inbox">
+<div>
+<a herf="#" class="price">$250.00</a>
+</div>
+<div class="rating">
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+</div>
+</div>
+<div class="heart">
+<i class="ri-poker-hearts-line"></i>
+</div>
+</div>
+<div class="box">
+    <div class="box-img">
+        <img src="https://th.bing.com/th/id/OIP.NgDB3B8mHxZWNTbGao1C_gHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+</div>
+<h3>Manhattan Toy wrt</h3>
+<h4>New design 2025</h4>
+<div class="inbox">
+<div>
+<a herf="#" class="price">$250.00</a>
+</div>
+<div class="rating">
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+<a href="#"><i class="ri-star-fill"></i></a>
+</div>
+</div>
+<div class="heart">
+<i class="ri-poker-hearts-line"></i>
+</div>
+
+            </div>
+        </section>
+<!---custom js link--->
+<script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

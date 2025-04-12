@@ -1,0 +1,71 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c1f7f5;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0,0, 0.2);
+}
+.nav-links li{
+    list-style: none;
+    margin: 0 12px;
+}
+.nav-links li a{
+    position: relative;
+    color:#333;
+    font-size: 19px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+}
+.nav-links li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #34efdf;
+    border-radius: 12px;
+    transition: all 0.4a ease;
+}
+.nav-links li.center a::before{
+    width: 50px;
+}
+.nav-links li.center a::before{
+    left: 50px;
+    transform: translateX(-50);
+}
+.nav-links li.Hero a::before{
+    width: 100px;
+    bottom: -5px;
+    opacity: 0;
+}
+.nav-links li.Hero a::before{
+   bottom: 0px;
+   opacity: 1;
+}
+.nav-links li.forward a::before{
+    width: 100px;
+    transform: scaleX(0);
+    transform-origin:right ;
+    transition: transform 0.4s ease;  
+}
+.nav-links li.forward a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+
+} 

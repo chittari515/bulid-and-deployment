@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.solar-system {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+}
+
+.planet-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: lightblue;
+}
+
+.orbit1 {
+    animation: orbit1 10s infinite linear;
+    transform-origin: 150px;
+}
+
+.orbit2 {
+    animation: orbit2 20s infinite linear;
+    transform-origin: 250px;
+}
+
+.orbit3 {
+    animation: orbit3 30s infinite linear;
+    transform-origin: 350px;
+}
+
+@keyframes orbit1 {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit2 {
+    from {
+        transform: rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit3 {
+    from {
+        transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+}
+</style>
+<body>
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="planet orbit1">
+            <div class="planet-inner"></div>
+        </div>
+        <div class="planet orbit2">
+            <div class="planet-inner"></div>
+        </div>
+        <div class="planet orbit3">
+            <div class="planet-inner"></div>
+        </div>
+        <div class="planet orbit2">
+            <div class="planet-inner"></div>
+        </div>
+        <div class="planet orbit3">
+            <div class="planet-inner"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -187,3 +187,8 @@ FROM hourly_sale
 GROUP BY shift
 ```
 
+
+
+![image alt](https://github.com/chittari515/bulid-and-deployment/blob/f2e9461f4df4e909a258047607c19467c5a23542/UI%20design.pdf)
+
+
